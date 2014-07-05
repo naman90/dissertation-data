@@ -10,42 +10,11 @@ import java.util.GregorianCalendar;
 import java.util.HashMap;
 
 public class CsvWriter06 {
-	public static void main(String[] args) {
-		generateCsvFile();
-	}
-
-	private static void generateCsvFile() {
-		// Connection con=null;
-		String sFileName = "C:\\Users\\Naman\\Dropbox\\dissertation\\ed-data\\processeddata\\07-0506\\merged06.csv";
+	
+	public static void generateCsvFile(FileWriter writer) {
+		
 		try {
-			
-			FileWriter writer = new FileWriter(sFileName);
-			writer.append("Month");
-			writer.append(',');
-			writer.append("Year");
-			writer.append(',');
-			writer.append("Day of Visit");
-			writer.append(',');
-			writer.append("Age");
-			writer.append(',');
-			writer.append("Sex");
-			writer.append(',');
-			writer.append("Race");
-			writer.append(',');
-			writer.append("Self Paid");
-			writer.append(',');
-			writer.append("Visit Weight");
-			writer.append(',');
-			writer.append("Region");
-			writer.append(',');
-			writer.append("Hospital Code");
-			writer.append(',');
-			writer.append("Hospital Owner");
-			writer.append(',');
-			writer.append("Alcohol Problem");
-			writer.append(',');
-			writer.append("Drug Problem");
-			writer.append('\n');
+		
 			int count = 0;
 			String line = "";
 			String files[] = {"C:\\Users\\Naman\\Dropbox\\dissertation\\ed-data\\processeddata\\07-0506\\ED2006" };
@@ -122,9 +91,6 @@ public class CsvWriter06 {
 				count=0;
 			}
 			
-			writer.flush();
-			writer.close();
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
